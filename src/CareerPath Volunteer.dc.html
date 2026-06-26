@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  ::selection { background: #1f9168; color: #ffffff; }
+</style>
+</helmet>
+<div style="background: #ffffff; color: #16212b; font-family: 'Hanken Grotesk', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
+
+  <!-- NAV -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.86); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(22,33,43,0.08);">
+    <nav style="max-width: 1160px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="CareerPath.dc.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #16212b;">
+        <span style="width: 26px; height: 26px; border-radius: 50%; background: #1f5fae; display: inline-flex; align-items: center; justify-content: center;">
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #1f9168;"></span>
+        </span>
+        <span style="font-family: 'Newsreader', serif; font-size: 22px; font-weight: 600; letter-spacing: -0.01em;">CareerPath</span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 34px;">
+        <a href="CareerPath.dc.html" style="color: #51606e; text-decoration: none; font-size: 15px; font-weight: 500;" style-hover="color: #1f5fae;">← Back to home</a>
+        <a href="#apply" style="background: #1f5fae; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 10px 20px; border-radius: 999px;" style-hover="background: #184c8c;">Get in touch</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section style="max-width: 1160px; margin: 0 auto; padding: 84px 32px 64px;">
+    <div style="max-width: 30em;">
+      <div style="display: inline-flex; align-items: center; gap: 9px; padding: 7px 14px; border: 1px solid rgba(31,95,174,0.28); border-radius: 999px; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; color: #1f5fae; margin-bottom: 26px;">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #1f9168;"></span>
+        Volunteer with us
+      </div>
+      <h1 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 58px; line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 24px;">
+        Help us build <em style="font-style: italic; color: #1f5fae;">CareerPath.</em>
+      </h1>
+      <p style="font-size: 19px; line-height: 1.6; color: #51606e; margin: 0;">
+        We're a nonprofit at the very start. The product isn't built yet — which is exactly why we're looking for people who want to shape it from day one. Every role here is volunteer, flexible, and genuinely meaningful.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHY VOLUNTEER -->
+  <section style="border-top: 1px solid rgba(22,33,43,0.07); border-bottom: 1px solid rgba(22,33,43,0.07); background: #f1f5f9;">
+    <div style="max-width: 1160px; margin: 0 auto; padding: 52px 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px;">
+      <div>
+        <div style="font-family: 'Newsreader', serif; font-size: 30px; color: #1f5fae; font-weight: 600; margin-bottom: 8px;">Real impact</div>
+        <p style="font-size: 15.5px; line-height: 1.55; color: #51606e; margin: 0;">You'll directly shape a product that helps immigrant professionals rebuild their careers.</p>
+      </div>
+      <div>
+        <div style="font-family: 'Newsreader', serif; font-size: 30px; color: #1f5fae; font-weight: 600; margin-bottom: 8px;">Ground floor</div>
+        <p style="font-size: 15.5px; line-height: 1.55; color: #51606e; margin: 0;">Founding-team ownership and a voice in the direction — not a task list handed down to you.</p>
+      </div>
+      <div>
+        <div style="font-family: 'Newsreader', serif; font-size: 30px; color: #1f9168; font-weight: 600; margin-bottom: 8px;">Flexible</div>
+        <p style="font-size: 15.5px; line-height: 1.55; color: #51606e; margin: 0;">A few hours a week, around your schedule. Many of us are immigrants ourselves.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLES -->
+  <section style="max-width: 1160px; margin: 0 auto; padding: 84px 32px 64px;">
+    <div style="margin-bottom: 44px;">
+      <div style="font-family: 'Roboto Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #1f9168; margin-bottom: 14px;">Roles we're assembling</div>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 42px; line-height: 1.08; letter-spacing: -0.015em; margin: 0; max-width: 16em;">Volunteer roles open right now.</h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px;">
+
+      <div style="background: #fff; border: 1px solid rgba(22,33,43,0.1); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; gap: 12px;" style-hover="border-color: rgba(31,95,174,0.4);">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+          <h3 style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Product Manager</h3>
+          <span style="font-family: 'Roboto Mono', monospace; font-size: 12px; color: #1f5fae; background: #e8eef8; padding: 5px 10px; border-radius: 999px; white-space: nowrap;">~5 hrs / wk</span>
+        </div>
+        <p style="font-size: 16px; line-height: 1.58; color: #51606e; margin: 0;">Turn a mission into a roadmap. You'll shape what we build first, talk to the people we serve, and keep a small team pointed in the same direction.</p>
+      </div>
+
+      <div style="background: #fff; border: 1px solid rgba(22,33,43,0.1); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; gap: 12px;" style-hover="border-color: rgba(31,95,174,0.4);">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+          <h3 style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Marketing Manager</h3>
+          <span style="font-family: 'Roboto Mono', monospace; font-size: 12px; color: #1f5fae; background: #e8eef8; padding: 5px 10px; border-radius: 999px; white-space: nowrap;">~4 hrs / wk</span>
+        </div>
+        <p style="font-size: 16px; line-height: 1.58; color: #51606e; margin: 0;">Help the right people find us. You'll grow our early community, tell our story clearly, and reach immigrant professionals where they already are.</p>
+      </div>
+
+      <div style="background: #fff; border: 1px solid rgba(22,33,43,0.1); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; gap: 12px;" style-hover="border-color: rgba(31,95,174,0.4);">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+          <h3 style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">HR / People Partner</h3>
+          <span style="font-family: 'Roboto Mono', monospace; font-size: 12px; color: #1f5fae; background: #e8eef8; padding: 5px 10px; border-radius: 999px; white-space: nowrap;">~3 hrs / wk</span>
+        </div>
+        <p style="font-size: 16px; line-height: 1.58; color: #51606e; margin: 0;">Build the team that builds the product. You'll help us bring on volunteers, keep them supported, and make this a good place to give time to.</p>
+      </div>
+
+      <div style="background: #fff; border: 1px solid rgba(22,33,43,0.1); border-radius: 16px; padding: 30px; display: flex; flex-direction: column; gap: 12px;" style-hover="border-color: rgba(31,95,174,0.4);">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+          <h3 style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 600; margin: 0; letter-spacing: -0.01em;">Mentors &amp; builders</h3>
+          <span style="font-family: 'Roboto Mono', monospace; font-size: 12px; color: #1f9168; background: #e3f1ea; padding: 5px 10px; border-radius: 999px; white-space: nowrap;">flexible</span>
+        </div>
+        <p style="font-size: 16px; line-height: 1.58; color: #51606e; margin: 0;">Mentors who've navigated the U.S. job market, plus engineers and designers to help bring the platform to life. Tell us how you'd like to help.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GET IN TOUCH FORM -->
+  <section id="apply" style="background: #1f5fae; color: #eef3fb;">
+    <div style="max-width: 760px; margin: 0 auto; padding: 88px 32px;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <div style="font-family: 'Roboto Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #6fe3b4; margin-bottom: 16px;">Get in touch</div>
+        <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: 42px; line-height: 1.08; letter-spacing: -0.02em; margin: 0 auto 16px; max-width: 14em;">Tell us how you'd like to help.</h2>
+        <p style="font-size: 17px; line-height: 1.6; color: #d3deef; margin: 0 auto; max-width: 30em;">One short form. We read every message and reply personally.</p>
+      </div>
+
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <div style="background: #fff; color: #16212b; border-radius: 18px; padding: 44px; text-align: center;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: #1f9168; color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 26px; margin-bottom: 18px;">✓</div>
+          <h3 style="font-family: 'Newsreader', serif; font-size: 28px; font-weight: 600; margin: 0 0 10px;">Thank you — message received.</h3>
+          <p style="font-size: 16px; line-height: 1.55; color: #51606e; margin: 0;">We'll be in touch soon. We're glad you want to build this with us.</p>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ onSubmit }}" style="background: #fff; border-radius: 18px; padding: 36px; display: flex; flex-direction: column; gap: 20px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 14px; font-weight: 600; color: #16212b;">Your name</span>
+              <input type="text" required value="{{ name }}" onInput="{{ onName }}" placeholder="Full name" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none;" style-focus="border-color: #1f5fae;" />
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 8px;">
+              <span style="font-size: 14px; font-weight: 600; color: #16212b;">Email</span>
+              <input type="email" required value="{{ email }}" onInput="{{ onEmail }}" placeholder="you@email.com" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none;" style-focus="border-color: #1f5fae;" />
+            </label>
+          </div>
+          <label style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 14px; font-weight: 600; color: #16212b;">How would you like to help?</span>
+            <select required value="{{ role }}" onChange="{{ onRole }}" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none; appearance: none;" style-focus="border-color: #1f5fae;">
+              <option value="">Select a role…</option>
+              <option value="pm">Product Manager</option>
+              <option value="marketing">Marketing Manager</option>
+              <option value="hr">HR / People Partner</option>
+              <option value="mentor">Mentor</option>
+              <option value="builder">Engineer / Designer</option>
+              <option value="other">Something else</option>
+            </select>
+          </label>
+          <label style="display: flex; flex-direction: column; gap: 8px;">
+            <span style="font-size: 14px; font-weight: 600; color: #16212b;">A little about you</span>
+            <textarea required value="{{ message }}" onInput="{{ onMessage }}" placeholder="What draws you to this, and what you'd bring." rows="4" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none; resize: vertical;" style-focus="border-color: #1f5fae;"></textarea>
+          </label>
+          <button type="submit" style="background: #16212b; color: #fff; border: none; font-size: 16px; font-weight: 700; padding: 16px; border-radius: 999px; cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; margin-top: 4px;" style-hover="background: #1f9168;">Send message</button>
+        </form>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #fff; border-top: 1px solid rgba(22,33,43,0.1);">
+    <div style="max-width: 1160px; margin: 0 auto; padding: 48px 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="width: 26px; height: 26px; border-radius: 50%; background: #1f5fae; display: inline-flex; align-items: center; justify-content: center;">
+          <span style="width: 9px; height: 9px; border-radius: 50%; background: #1f9168;"></span>
+        </span>
+        <span style="font-family: 'Newsreader', serif; font-size: 20px; font-weight: 600;">CareerPath</span>
+      </div>
+      <div style="font-size: 13.5px; color: #9aa6b3;">© 2026 CareerPath. Built by volunteers, for the people who need it.</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { name: '', email: '', role: '', message: '', sent: false };
+  renderVals() {
+    return {
+      name: this.state.name,
+      email: this.state.email,
+      role: this.state.role,
+      message: this.state.message,
+      sent: this.state.sent,
+      notSent: !this.state.sent,
+      onName: (e) => this.setState({ name: e.target.value }),
+      onEmail: (e) => this.setState({ email: e.target.value }),
+      onRole: (e) => this.setState({ role: e.target.value }),
+      onMessage: (e) => this.setState({ message: e.target.value }),
+      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+    };
+  }
+}
+</script>
+</body>
+</html>
