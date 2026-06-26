@@ -16,6 +16,14 @@
   html { scroll-behavior: smooth; }
   body { margin: 0; }
   ::selection { background: #1f9168; color: #ffffff; }
+  @media (max-width: 860px) {
+    [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    h1 { font-size: 40px !important; line-height: 1.08 !important; }
+    h2 { font-size: 30px !important; }
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 33px !important; }
+  }
 </style>
 </helmet>
 <div style="background: #ffffff; color: #16212b; font-family: 'Hanken Grotesk', sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden;">
@@ -133,33 +141,40 @@
 
       <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
         <form onSubmit="{{ onSubmit }}" style="background: #fff; border-radius: 18px; padding: 36px; display: flex; flex-direction: column; gap: 20px;">
+          <input type="hidden" name="access_key" value="47c1640b-031c-4c8b-a8d6-d20c85cc37db">
+          <input type="hidden" name="subject" value="New CareerPath volunteer interest">
+          <input type="hidden" name="from_name" value="CareerPath website">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display: none;">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px;">
             <label style="display: flex; flex-direction: column; gap: 8px;">
               <span style="font-size: 14px; font-weight: 600; color: #16212b;">Your name</span>
-              <input type="text" required value="{{ name }}" onInput="{{ onName }}" placeholder="Full name" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none;" style-focus="border-color: #1f5fae;" />
+              <input type="text" name="name" required value="{{ name }}" onInput="{{ onName }}" placeholder="Full name" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none;" style-focus="border-color: #1f5fae;" />
             </label>
             <label style="display: flex; flex-direction: column; gap: 8px;">
               <span style="font-size: 14px; font-weight: 600; color: #16212b;">Email</span>
-              <input type="email" required value="{{ email }}" onInput="{{ onEmail }}" placeholder="you@email.com" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none;" style-focus="border-color: #1f5fae;" />
+              <input type="email" name="email" required value="{{ email }}" onInput="{{ onEmail }}" placeholder="you@email.com" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none;" style-focus="border-color: #1f5fae;" />
             </label>
           </div>
           <label style="display: flex; flex-direction: column; gap: 8px;">
             <span style="font-size: 14px; font-weight: 600; color: #16212b;">How would you like to help?</span>
-            <select required value="{{ role }}" onChange="{{ onRole }}" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none; appearance: none;" style-focus="border-color: #1f5fae;">
+            <select name="role" required value="{{ role }}" onChange="{{ onRole }}" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none; appearance: none;" style-focus="border-color: #1f5fae;">
               <option value="">Select a role…</option>
-              <option value="pm">Product Manager</option>
-              <option value="marketing">Marketing Manager</option>
-              <option value="hr">HR / People Partner</option>
-              <option value="mentor">Mentor</option>
-              <option value="builder">Engineer / Designer</option>
-              <option value="other">Something else</option>
+              <option value="Product Manager">Product Manager</option>
+              <option value="Marketing Manager">Marketing Manager</option>
+              <option value="HR / People Partner">HR / People Partner</option>
+              <option value="Mentor">Mentor</option>
+              <option value="Engineer / Designer">Engineer / Designer</option>
+              <option value="Something else">Something else</option>
             </select>
           </label>
           <label style="display: flex; flex-direction: column; gap: 8px;">
             <span style="font-size: 14px; font-weight: 600; color: #16212b;">A little about you</span>
-            <textarea required value="{{ message }}" onInput="{{ onMessage }}" placeholder="What draws you to this, and what you'd bring." rows="4" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none; resize: vertical;" style-focus="border-color: #1f5fae;"></textarea>
+            <textarea name="message" required value="{{ message }}" onInput="{{ onMessage }}" placeholder="What draws you to this, and what you'd bring." rows="4" style="background: #fbfcfe; border: 1px solid rgba(22,33,43,0.18); border-radius: 10px; padding: 13px 15px; font-size: 15.5px; font-family: 'Hanken Grotesk', sans-serif; color: #16212b; outline: none; resize: vertical;" style-focus="border-color: #1f5fae;"></textarea>
           </label>
-          <button type="submit" style="background: #16212b; color: #fff; border: none; font-size: 16px; font-weight: 700; padding: 16px; border-radius: 999px; cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; margin-top: 4px;" style-hover="background: #1f9168;">Send message</button>
+          <button type="submit" disabled="{{ submitting }}" style="background: #16212b; color: #fff; border: none; font-size: 16px; font-weight: 700; padding: 16px; border-radius: 999px; cursor: pointer; font-family: 'Hanken Grotesk', sans-serif; margin-top: 4px;" style-hover="background: #1f9168;">Send message</button>
+          <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 0; color: #c0392b; font-size: 14px; text-align: center;">Something went wrong — please email us at info@careerpathway.info.</p>
+          </sc-if>
         </form>
       </sc-if>
     </div>
@@ -182,7 +197,7 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { name: '', email: '', role: '', message: '', sent: false };
+  state = { name: '', email: '', role: '', message: '', sent: false, submitting: false, error: false };
   renderVals() {
     return {
       name: this.state.name,
@@ -191,11 +206,26 @@ class Component extends DCLogic {
       message: this.state.message,
       sent: this.state.sent,
       notSent: !this.state.sent,
+      submitting: this.state.submitting,
+      error: this.state.error,
       onName: (e) => this.setState({ name: e.target.value }),
       onEmail: (e) => this.setState({ email: e.target.value }),
       onRole: (e) => this.setState({ role: e.target.value }),
       onMessage: (e) => this.setState({ message: e.target.value }),
-      onSubmit: (e) => { e.preventDefault(); this.setState({ sent: true }); },
+      onSubmit: async (e) => {
+        e.preventDefault();
+        if (this.state.submitting) return;
+        const data = new FormData(e.target);
+        this.setState({ submitting: true, error: false });
+        try {
+          const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+          const json = await res.json();
+          if (json.success) this.setState({ sent: true, submitting: false });
+          else this.setState({ error: true, submitting: false });
+        } catch (err) {
+          this.setState({ error: true, submitting: false });
+        }
+      },
     };
   }
 }
